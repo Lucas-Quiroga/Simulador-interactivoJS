@@ -38,7 +38,7 @@ function seleccionServic (nombreServicio, turno){
 function turnoDado(dia,fecha,mes,hora){
     let horarioInicio = 14;
     let horarioFinal = 21;
-    if((dia == "Martes" || "Jueves") && (fecha == 1 || 3 || 8 || 10 || 15 || 17 || 22 || 24 || 29 || 31) && (mes == "Marzo" || "Abril") && (hora >= horarioInicio && hora <= horarioFinal)) {
+    if((dia === "Martes" || "martes" || "Jueves" || "jueves") && (fecha === 1 || 3 || 8 || 10 || 15 || 17 || 22 || 24 || 29 || 31) && (mes === "Marzo" || "marzo" || "Abril" || "abril") && (hora >= horarioInicio && hora <= horarioFinal)) {
         return `Su turno será el día ${dia} ${fecha} de ${mes} a las ${hora}hs`;
     } else {
         return `Por favor introduzca bien la información solicitada.`;
