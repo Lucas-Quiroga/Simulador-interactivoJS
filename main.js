@@ -9,28 +9,30 @@ let tallerCalenMaya = 1300;
 let tallerRunas = 1200;
 
 /*Posible ajuste para que sea todo en mayuscula
- let pregunta = dato1.toUpperCase;*/
+let pregunta = dato1.toUpperCase;*/
 
-let turno = parseInt("");
+let nombreServicio = prompt("Escriba el servicio que desee\n Opciones: Lectura de tarot, Reiki, Limpieza energetica, Sanación");
+let turno = prompt("Escriba cuantos turnos desea agendar");
+
 
 function seleccionServic (nombreServicio, turno){
     //Cree un switch para evaluar el caso particular de cada servicio
         switch (nombreServicio) {
         case "Lectura de tarot":
         case "Tarot":
-            return tarot * turno;
+            return console.log (`El total del servicio tendría un valor de $${tarot * turno}`);
             break;
         case "Reiki":
         case "reiki":
-            return reiki * turno;
+            return console.log (`El total del servicio tendría un valor de $${reiki * turno}`);
             break;
         case "Limpieza energetica":
         case "limpieza energetica":
-            return limpiezaEnergetica * turno;
+            return console.log (`El total del servicio tendría un valor de $${limpiezaEnergetica * turno}`);
             break;
         case "Sanación":
         case "sanación":
-            return sanacion * turno;
+            return console.log (`El total del servicio tendría un valor de $${sanacion * turno}`);
             break;
         default:
             return 0;
@@ -38,36 +40,28 @@ function seleccionServic (nombreServicio, turno){
     }
 }
 
-let probando2 = seleccionServic;
+seleccionServic(nombreServicio,turno);
 
-function prueba(b){
-    probando2 * b
+let cantidadDeTurnos
+
+for(let i= 0; i <= 30; i++){
+
 }
 
-
-const multiFunc = (a,b) => {a*b};
-
-
-
+let dia = prompt("Escriba el día que usted puede comunicarse \n Opciones: Martes o Jueves")
+let mes = prompt("Escriba el mes de preferencia \n Opciones: Marzo o Abril")
+let hora = prompt("Escriba la hora de preferencia \n Opciones: de 14hs a 21hs")
 
 
+function turnoDado(dia,mes,hora){
+    let horarioInicio = 14;
+    let horarioFinal = 21;
 
-
-let dato1 = prompt("Escriba el servicio que desee\n Opciones: Lectura de tarot, Reiki, Limpieza energetica, Sanación");
-let dato2 = prompt("Escriba el taller que desee tomar\n Opciones: Taller de tarot, Taller de calendario maya, Taller de runas");
-
-// let resultado = calcularServicios(dato1);
-// alert(resultado);
-
-const Suma = (a,b) =>{return a + b}
-
-function calcularServicios (costoServicio, CuantosTurnos){
-    //evaluo el servicio que quiere y le sumo la cantidad de turnos que desee pedir
-    let dato = costoServicio * CuantosTurnos;
-    return `el costo del servicio por la cantidad de turnos que pidio es de ${dato1}`
+    if((dia == "Martes" || "Jueves") && (mes == "Marzo" || "Abril") && (hora >= horarioInicio && hora <= horarioFinal)) {
+        return `Su turno es el día ${dia} de ${mes} a las ${hora}hs`;
+    } else {
+        return console.log("Por favor introduzca bien la información")
+    }
 }
 
-function calcularElservicio (servicio, cantidadDelturno){
-   let resultado = servico * cantidadDelturno
-   return resultado
-}
+turnoDado(dia,mes,hora);
